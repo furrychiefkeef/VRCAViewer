@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "vrcaViewer": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
