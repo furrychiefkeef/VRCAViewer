@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using AssetsTools.NET.Extra;
+﻿using AssetsTools.NET.Extra;
 using AssetsTools.NET;
 using Pastel;
 
@@ -16,7 +10,7 @@ internal class AvatarFile
     {
         AssetsManager? manager = new AssetsManager();
 
-        BundleFileInstance? bunInst = manager.LoadBundleFile(filePath, true);
+        BundleFileInstance? bunInst = manager.LoadBundleFile(assetbundle, true);
         if (bunInst != null)
         {
             Console.WriteLine("Failed to load bundle file or it's not reconizable.");
@@ -60,7 +54,7 @@ internal class AvatarFile
                         Console.WriteLine();
                     }
                     Console.Clear();
-                    Console.WriteLine($"avatar id::<{avtr.Pastel("#ff0058")}>");
+                    Console.WriteLine($"avatar id::<{avtr.Pastel($"{Environment.GetEnvironmentVariable(("VRCAVIEWERCOLORSCHEME"), EnvironmentVariableTarget.User)}")}>");
                     Console.ReadLine();
                     _avtr = avtr;
                     return avtr;

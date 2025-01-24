@@ -18,10 +18,10 @@ if (args.Length > 0)
                 return 0;
             case "%help":
                 Console.Write($"COMMANDS | PREFIX [{"%".Pastel(ConsoleColor.Cyan)}] " +
-                    $"{"view".Pastel(ConsoleColor.Magenta)}, " +
-                    $"{"tree".Pastel(ConsoleColor.Green)}, " +
-                    $"{"help".Pastel(ConsoleColor.Red)}, " +
-                    $"{"get_id".Pastel(ConsoleColor.Yellow)}");
+                              $"{ "view".Pastel(Environment.GetEnvironmentVariable("VRCAVIEWERCOLORSCHEME", EnvironmentVariableTarget.User)) }, " +
+                              $"{ "tree".Pastel(ConsoleColor.Green) }, " +
+                              $"{ "help".Pastel(ConsoleColor.Red) }, " +
+                              $"{ "get_id".Pastel(ConsoleColor.Yellow) }");
                 Console.ReadLine();
                 Console.Clear();
                 goto begin;
